@@ -11,7 +11,7 @@ process cutadapt {
     publishDir "${params.outDir}"
 	
     input:
-    tuple id, path(R1), path(R2) from design.fqs.unique()
+    val(test) from Channel.from('test')
     
     output:
     path("*.txt")
