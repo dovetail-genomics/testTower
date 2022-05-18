@@ -4,7 +4,7 @@
 params.outDir = false
 
 
-println projectDir
+println projectDir.listFiles()
 
 /*
 process cutadapt {
