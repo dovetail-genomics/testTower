@@ -4,6 +4,9 @@
 params.outDir = false
 
 
+println projectDir
+
+/*
 process cutadapt {
     label 'minor'
     container 'ubuntu:20.04'
@@ -20,4 +23,4 @@ process cutadapt {
     touch ${test}.txt
     """
 }
-
+*/
