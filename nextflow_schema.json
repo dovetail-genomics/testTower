@@ -11,12 +11,18 @@
             "fa_icon": "fas fa-terminal",
             "description": "Define where the pipeline should find input data and save output data.",
             "properties": {
+                "design": {
+                    "type": "string",
+                    "default": "./design.csv"
+                },
                 "outDir": {
                     "type": "string",
-                    "default": null
+                    "default": "./",
+                    "description": "fdasfadsfas"
                 }
             },
             "required": [
+                "design",
                 "outDir"
             ]
         }

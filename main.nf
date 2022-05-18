@@ -4,23 +4,24 @@
 params.outDir = false
 
 
-println projectDir.listFiles()
+params.design = './design.csv'
 
-/*
-process cutadapt {
+
+
+process test {
+    echo true
     label 'minor'
     container 'ubuntu:20.04'
 
     publishDir "${params.outDir}"
 	
     input:
-    val(test) from Channel.from('test')
+    path(test) from Channel.fromPath(params.design)
     
     output:
     path("*.txt")
 
     """
-    touch ${test}.txt
+    cat ${test} | tee test.txt
     """
 }
-*/
